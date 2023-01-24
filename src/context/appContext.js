@@ -31,10 +31,10 @@ export function AppProvider() {
       path: '/rankingsearch',
       element: <RankingSearch />,
     },
-    /* {
+    {
       path: '/ranking/:div',
       element: <Ranking />,
-    }, */
+    },
   ]);
 
   return (

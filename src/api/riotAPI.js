@@ -1,6 +1,6 @@
 /* const [searchText, setSearchText] = useState('');
 const [playerData, setPlayerData] = useState({}); */
-const API_KEY = "RGAPI-9d398d55-e0ff-4329-b0d8-bb0cdc08eda9"
+const API_KEY = "RGAPI-f3f23af7-147e-4c94-a94d-723ffd18c9b5"
 
 const PlayerApi = {
     
@@ -51,10 +51,7 @@ const PlayerApi = {
         }catch (error){
             console.log(error)
         } 
-    }
-}
-
-const RankApi = {
+    },
 
     getRanking: async (queue, tier, division) => {
         try {
@@ -75,6 +72,7 @@ const RankApi = {
             console.log(error)
         }
     },
+
 }
 
-export default PlayerApi;
+export default PlayerApi ;
