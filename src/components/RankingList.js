@@ -34,6 +34,7 @@ export default function RankingList(rankingtab) {
         <Table>
           <Thead>
             <Tr>
+              <Th>Ranking</Th>
               <Th>Summoner Name</Th>
               <Th>League Points</Th>
               <Th>Wins</Th>
@@ -47,6 +48,7 @@ export default function RankingList(rankingtab) {
               <>
                 {tab.map(player =>(
                   <Tr>
+                    <Td>{tab.indexOf(player)+1}</Td>
                     <Td>{player.summonerName}</Td>
                     <Td>{player.leaguePoints}</Td>
                     <Td>{player.wins}</Td>
