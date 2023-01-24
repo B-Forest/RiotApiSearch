@@ -3,39 +3,40 @@ import {
   ChakraProvider,
   Box,
   Text,
-  Link,
   VStack,
-  Code,
   Grid,
-  theme,
+
+  Button,
+  Heading,
+  Flex,
 } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
-import { Logo } from './Logo';
+
+//import { AppContext } from './context/appContext';
+import Header from './components/Header';
+import { Link } from "react-router-dom";
+
 
 function App() {
   return (
-    <ChakraProvider theme={theme}>
+    <>
+      <Header/>
       <Box textAlign="center" fontSize="xl">
-        <Grid minH="100vh" p={3}>
-          <ColorModeSwitcher justifySelf="flex-end" />
+        <Grid minH="100vh" p={3}>      
           <VStack spacing={8}>
-            <Logo h="40vmin" pointerEvents="none" />
-            <Text>
-              Edit <Code fontSize="xl">src/App.js</Code> and save to reload.
-            </Text>
-            <Link
-              color="teal.500"
-              href="https://chakra-ui.com"
-              fontSize="2xl"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learn Chakra
-            </Link>
+          <div className='App'>
+              <div className='container'>
+                <Heading>Home Page</Heading>
+              <Text> Voici les liens de nos différentes fonctionalités </Text>
+              <Flex minWidth='max-content' direction='row' justify='space-around'  gap='2'>
+                <Link className="nav-item" to='/rankingsearch'><Button colorScheme='blue'>Ranking</Button></Link>
+                <Link className="nav-item" to='/profilesearch'><Button colorScheme='blue'>Profile</Button></Link>
+              </Flex>
+              </div>
+          </div>
           </VStack>
         </Grid>
       </Box>
-    </ChakraProvider>
+    </>
   );
 }
 
