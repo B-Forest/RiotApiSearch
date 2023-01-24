@@ -15,12 +15,11 @@ export default function RankingList(rankingtab) {
   const [tab, setTab] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  console.log(rankingtab.rankingtab[0])
+  //console.log(rankingtab.rankingtab[0])
   useEffect(() => {
     
     PlayerApi.getRanking(rankingtab.rankingtab[0],rankingtab.rankingtab[1],rankingtab.rankingtab[2]).then(data => {
       setTab(data);
-      console.log(tab)
       if (data) {
         setIsLoaded(true);
       }
