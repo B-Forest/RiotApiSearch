@@ -32,7 +32,7 @@ export function AppProvider() {
       element: <RankingSearch />,
     },
     {
-      path: '/ranking/:div',
+      path: '/ranking/:queue/:tier/:division',
       element: <Ranking />,
     },
   ]);

@@ -20,14 +20,15 @@ import PlayerApi from '../api/riotAPI';
 export default function RankingSearch() {
 
   const navigate = useNavigate();
-  const [rankingTab, setRankingTab] = useState([])
+  const [queue, setQueue] = useState('');
+  const [tier, setTier] = useState('');
+  const [division, setDivision] = useState('I');
 
   const handleSubmit = (e) => {
-    console.log(rankingTab)
     e.preventDefault();
-    PlayerApi.getRanking(rankingTab).then(data =>{
-      navigate(`/ranking/${rankingTab[0]}`)
-    })
+    
+    navigate(`/ranking/${queue}/${tier}/${division}`)
+    
   }
 
   return (
@@ -38,13 +39,13 @@ export default function RankingSearch() {
           <Heading>Ranking Search</Heading>
           <VStack spacing={8}>
           <div className="container">
-              <FormControl>
+              <FormControl onSubmit={handleSubmit}>
                 <FormLabel>Ranking for Iron to Challenger</FormLabel>
-                <Select placeholder="Queue" onChange={e => setRankingTab(e.target.value)}>
+                <Select placeholder="Queue" value={queue} onChange={(e) => setQueue(e.target.value)}>
                   <option value="RANKED_SOLO_5x5">Solo Queue</option>
                   <option value="RANKED_FLEX_SR">Flex Queue</option>
                 </Select>
-                <Select placeholder="Tier" onChange={e => setRankingTab(e.target.value)}>
+                <Select placeholder="Tier" value={tier} onChange={(e) => setTier(e.target.value)}>
                   <option value="CHALLENGER">Challenger</option>
                   <option value="GRANDMASTER">Grandmaster</option>
                   <option value="MASTER">Master</option>
@@ -55,7 +56,7 @@ export default function RankingSearch() {
                   <option value="BRONZE">Bronze</option>
                   <option value="IRON">Iron</option>
                 </Select>
-                <Select placeholder="Division" onChange={e => setRankingTab(e.target.value)}>
+                <Select placeholder="Division" value={division} onChange={(e) => setDivision(e.target.value)}>
                   <option value="I">I</option>
                   <option value="II">II</option>
                   <option value="III">III</option>
