@@ -27,6 +27,7 @@ function App() {
               <div className='container'>
                 <Heading>Home Page</Heading>
               <Text> Voici les liens de nos différentes fonctionalités </Text>
+              <Text>Vous pouvez avec cette application rechercher le profile d'un jouer et aussi afficher le classement de chaque divisions</Text>
               <Flex minWidth='max-content' direction='row' justify='space-around'  gap='2'>
                 <Link className="nav-item" to='/rankingsearch'><Button colorScheme='blue'>Ranking</Button></Link>
                 <Link className="nav-item" to='/profilesearch'><Button colorScheme='blue'>Profile</Button></Link>
