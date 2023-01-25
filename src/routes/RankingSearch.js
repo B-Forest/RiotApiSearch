@@ -20,7 +20,7 @@ import PlayerApi from '../api/riotAPI';
 export default function RankingSearch() {
 
   const navigate = useNavigate();
-  const [queue, setQueue] = useState('');
+  const [queue, setQueue] = useState('RANKED_SOLO_5x5');
   const [tier, setTier] = useState('');
   const [division, setDivision] = useState('I');
 
