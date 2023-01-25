@@ -38,6 +38,7 @@ export default function RankingList(rankingtab) {
               <Th>League Points</Th>
               <Th>Wins</Th>
               <Th>Losses</Th>
+              <Th>Winrate</Th>
             </Tr>
           </Thead>
           <Tbody>
@@ -52,6 +53,7 @@ export default function RankingList(rankingtab) {
                     <Td>{player.leaguePoints}</Td>
                     <Td>{player.wins}</Td>
                     <Td>{player.losses}</Td>
+                    <Td>{parseInt((Number(player.wins)/(Number(player.wins+player.losses)))*100)}%</Td>
                   </Tr>
                 ))}   
               </>
