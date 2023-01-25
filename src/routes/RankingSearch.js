@@ -26,9 +26,7 @@ export default function RankingSearch() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    
     navigate(`/ranking/${queue}/${tier}/${division}`)
-    
   }
 
   return (
