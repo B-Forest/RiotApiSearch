@@ -1,3 +1,7 @@
+If you want to try this project using a fork or something else you will need to have a riot account
+because you will need a api key mine is available just 24 hours
+You will just have to change the const API_KEY in the file riotAPI.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

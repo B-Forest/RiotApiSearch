@@ -1,6 +1,6 @@
 /* const [searchText, setSearchText] = useState('');
 const [playerData, setPlayerData] = useState({}); */
-const API_KEY = "RGAPI-a0bb5c09-68f2-4fcb-b9f0-c1cc63e6df54"
+const API_KEY = "RGAPI-d0553f55-95e3-40ce-833f-449046cfe77d"
 
 const PlayerApi = {
     

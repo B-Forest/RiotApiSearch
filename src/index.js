@@ -5,6 +5,7 @@ import * as ReactDOM from 'react-dom/client';
 import * as serviceWorker from './serviceWorker';
 import { AppProvider } from './context/appContext';
 
+
 const container = document.getElementById('root');
 const root = ReactDOM.createRoot(container);
 
